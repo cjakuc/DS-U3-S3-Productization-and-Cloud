@@ -1,2 +1,6 @@
+# Ignore development databases
 *.db
 *.sglite3
+
+# Ignore secret credentials
+.env
