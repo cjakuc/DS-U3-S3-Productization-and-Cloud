@@ -2,13 +2,14 @@
 
 from flask import Blueprint
 
-home_routes = Blueprint("home_routes",__name__)
+home_routes = Blueprint("home_routes", __name__)
 
-@app.routes.route("/") # When someone visits the home page, run hello function
+@home_routes.route("/")
 def hello():
+    print("VISITED THE HELLO PAGE")
     return "Hello World!"
 
-@app.routes.route("/about")
+@home_routes.route("/about")
 def about():
     print("VISITED THE ABOUT PAGE")
     return "About Me!"

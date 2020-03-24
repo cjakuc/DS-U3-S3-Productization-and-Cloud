@@ -1,0 +1,29 @@
+<!-- web_app/templates/new_book.html -->
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <h2>New Book Form</h2>
+
+    <p>Hello, use the form below to create a new book...</p>
+
+    <form action="/tweets/create" method="POST">
+
+        <label>Tweet ID:</label>
+        <input type="text" name="tweet_id" placeholder="0" value="0">
+
+        <!-- <label>User Handle:</label>
+        <select name="author_name">
+          <option value="A1">Author 1</option>
+          <option value="A2">Author 2</option>
+          <option value="A3">Author 3</option>
+        </select> -->
+
+        <label>Tweet Content</label>
+        <input type="text" name="tweet_content" placeholder="Make a tweet" value="Make a tweet">
+
+        <button>Submit</button>
+    </form>
+
+{% endblock %}

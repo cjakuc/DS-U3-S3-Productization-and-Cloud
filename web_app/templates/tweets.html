@@ -1,0 +1,22 @@
+<!-- web_app/templates/books.html -->
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <h2>Tweets Page</h2>
+
+    <p>Hello, welcome to the tweets page...</p>
+
+    {% if tweets %}
+        <ul>
+        {% for tweet in tweets %}
+            <li>{{ tweet.tweet_id, tweet.tweet_content }}</li>
+        {% endfor %}
+        </ul>
+
+    {% else %}
+        <p>Tweets not found.</p>
+    {% endif %}
+
+{% endblock %}
